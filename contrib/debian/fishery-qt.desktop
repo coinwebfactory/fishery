@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Fishery
+Comment=Fishery P2P Cryptocurrency
+Comment[fr]=Fishery, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Fishery, eşten eşe kriptografik sanal para birimi
+Exec=fishery-qt %u
+Terminal=false
+Type=Application
+Icon=fishery128
+MimeType=x-scheme-handler/fishery;
+Categories=Office;Finance;

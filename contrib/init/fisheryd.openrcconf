@@ -1,0 +1,26 @@
+# /etc/conf.d/fisheryd: config file for /etc/init.d/fisheryd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/fishery/fishery.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/fisheryd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/fisheryd.pid"
+
+# Where to write fisheryd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/fisheryd"
+
+# User and group to own fisheryd process
+#BITCOIND_USER="fishery"
+#BITCOIND_GROUP="fishery"
+
+# Path to fisheryd executable
+#BITCOIND_BIN="/usr/bin/fisheryd"
+
+# Nice value to run fisheryd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

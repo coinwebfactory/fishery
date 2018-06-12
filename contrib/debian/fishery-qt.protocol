@@ -1,0 +1,11 @@
+[Protocol]
+exec=fishery-qt '%u'
+protocol=fishery
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

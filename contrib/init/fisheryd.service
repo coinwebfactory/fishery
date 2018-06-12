@@ -1,0 +1,26 @@
+[Unit]
+Description=Fishery's distributed currency daemon
+After=network.target
+
+[Service]
+User=fishery
+Group=fishery
+
+Type=forking
+PIDFile=/var/lib/fisheryd/fisheryd.pid
+
+ExecStart=/usr/bin/fisheryd -daemon -pid=/var/lib/fisheryd/fisheryd.pid \
+          -conf=/etc/fishery/fishery.conf -datadir=/var/lib/fisheryd
+
+ExecStop=-/usr/bin/fishery-cli -conf=/etc/fishery/fishery.conf \
+         -datadir=/var/lib/fisheryd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
